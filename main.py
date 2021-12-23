@@ -3,7 +3,7 @@ import pprint
 
 keys = {}
 print('Please type pitch:')
-pitch = int(input())
+pitch = abs(int(input()))
 
 
 def createKeyDictionary():
