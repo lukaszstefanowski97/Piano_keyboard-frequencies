@@ -26,7 +26,7 @@ def calculateFrequencies():
 
     i = 49
     while i < 88:
-        frequencies[i] = frequencies[i - 1] * numpy.power(2, 1/12)
+        frequencies[i] = frequencies[i - 1] * numpy.power(2, 1 / 12)
         i += 1
 
     i = 47
