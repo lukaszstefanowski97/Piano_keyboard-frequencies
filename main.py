@@ -37,7 +37,6 @@ def calculateFrequencies():
 
 
 createKeyFrequenciesDictionary()
-keyNames = pianoKeyFrequencies.keys()
 
-for keyName in keyNames:
+for keyName in pianoKeyFrequencies.keys():
     print(keyName + ': ' + pianoKeyFrequencies[keyName])
