@@ -1,11 +1,11 @@
 import numpy
 
-pianoKeys = {}
+pianoKeyFrequencies = {}
 print('Please type pitch:')
 pitch = abs(int(input()))
 
 
-def createKeyDictionary():
+def createKeyFrequenciesDictionary():
     notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
     octave = 0
     frequencies = calculateFrequencies()
@@ -15,7 +15,7 @@ def createKeyDictionary():
         if note == "C":
             octave += 1
         note += str(octave)
-        pianoKeys[note] = str(frequencies[i - 1]) + " Hz"
+        pianoKeyFrequencies[note] = str(frequencies[i - 1]) + " Hz"
         i += 1
 
 
@@ -36,8 +36,8 @@ def calculateFrequencies():
     return frequencies
 
 
-createKeyDictionary()
-keyNames = pianoKeys.keys()
+createKeyFrequenciesDictionary()
+keyNames = pianoKeyFrequencies.keys()
 
 for keyName in keyNames:
-    print(keyName + ': ' + pianoKeys[keyName])
+    print(keyName + ': ' + pianoKeyFrequencies[keyName])
